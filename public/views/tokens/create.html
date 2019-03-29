@@ -1,0 +1,27 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="closeModal()"></button>
+    <h3 class="modal-title">{{_labels.tokens.modal_new_title}}</h3>
+</div>
+<div class="modal-body ">
+    <form id="create_form">
+    <div class="row">
+        <div class="modal-body">
+            <div class="form-group">
+                <label class="control-label">{{_labels.tokens.comment1}}</label>
+                <div class="input-icon">
+                    <input class="form-control placeholder-no-fix" type="text" ng-model = "ctoken.name" autocomplete="off" name="name"/>
+                </div>
+            </div>
+            <div class="form-actions">
+                <label class="control-label">.</label>
+                <div class="input-icon">
+                    <button class="btn blue pull-right" ng-click="saveToken()">{{_labels.common.btn_save}}</button>
+                </div>
+            </div>
+        </div>
+        </div>
+        </form>
+    </div>
+
+
+

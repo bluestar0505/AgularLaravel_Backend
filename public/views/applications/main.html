@@ -1,0 +1,81 @@
+
+<!-- BEGIN PAGE HEADER-->
+<h3 class="page-title">
+    Applications
+</h3>
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="fa fa-home"></i>
+            <a href="#/dashboard.html">Home</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a href="#/applications"> {{_labels.apps.title}}</a>
+        </li>
+    </ul>
+</div>
+<!-- END PAGE HEADER-->
+<!-- BEGIN MAIN CONTENT -->
+<div class="row">
+    <div class="col-md-12">
+        <p></p>
+        <!-- BEGIN EXAMPLE TABLE PORTLET-->
+            <div class="portlet-body">
+                <div class="table-toolbar">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="btn-group">
+                                <button ng-click="toNewApp()" class="btn green">
+                                    {{_labels.apps.btn_new}} <i class="fa fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <table class="table table-striped table-hover table-bordered" id="table_list">
+                    <thead>
+                    <tr>
+
+                        <th class="col-md-2">
+                            Name
+                        </th>
+                        <th class="col-md-1">
+                            Platform
+                        </th>
+                        <th class="col-md-7">
+                            Description
+                        </th>
+                        <th class="col-md-2 text-center">
+                            Actions
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat = "dt in clist">
+                        <td>{{dt.name}}</td> <td>{{dt.platform}}</td><td>{{dt.description}}</td>
+                        <td class="text-center">
+                            <button type="button" class="todo-username-btn btn btn-circle btn-default btn-xs" ng-click="toUpdateApp(dt)">&nbsp; &nbsp;Modify &nbsp;&nbsp;</button>
+
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- END MAIN CONTENT -->
+
+<!-- BEGIN MAIN JS -->
+<script>
+
+        //Initialize Tables
+       //UserTableEditable.init();
+
+</script>
+<!-- END MAIN JS -->
+
+
+

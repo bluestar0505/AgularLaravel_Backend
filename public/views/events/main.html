@@ -1,0 +1,128 @@
+<!-- BEGIN PAGE HEADER-->
+<h3 class="page-title">
+    {{_labels.analytics.title}}
+</h3>
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="fa fa-home"></i>
+            <a href="#/dashboard.html">Home</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a href="#/events/list">{{_labels.analytics.list}}</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+    </ul>
+
+</div>
+<!-- END PAGE HEADER-->
+<!-- BEGIN MAIN CONTENT -->
+<div class="row">
+    <div class="col-md-12"><p></p>
+
+        <div class="portlet-body ">
+            <!--BEGIN　App List-->
+            <div class="page-sidebar-wrapper col-md-5 ">
+                <div class="portlet-body form" >
+
+                        <div class="portlet light">
+                            <form id="search-form">
+                                <div class="caption" data-toggle="collapse" data-target=".todo-project-list-content">
+                                    <span class="caption-subject font-green-sharp bold uppercase">{{_labels.analytics.filter_title}}</span>
+                                </div>
+                                <input type="text" class="form-control col-md-4" name="search" ng-model="csearch.search" placeholder="Search String:">
+
+                                <div class="form-group">
+                                    <br/><br/>
+                                    <span class="help-block"> </span>
+                                    <div class="">
+                                        <div class="input-group input-large date-picker input-daterange"
+                                             data-date="10/11/2012" data-date-format="mm/dd/yyyy">
+                                            <input type="text" class="form-control" name="from" ng-model="csearch.from" placeholder="from">
+									<span class="input-group-addon">
+									to </span>
+                                            <input type="text" class="form-control" name="to" ng-model="csearch.to" placeholder="to">
+                                        </div>
+                                        <!-- /input-group -->
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">Event:</label>
+                                    <div class="col-md-8">
+                                        <select class="form-control select2me" ng-model="csearch.event">
+                                            <option value=""></option>
+                                            <option value="view">View</option>
+                                            <option value="open">Open</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">Application:</label>
+                                    <div class="col-md-8">
+                                        <select class="form-control select2me" id="sel-app"
+                                                ng-model="csearch.app" ng-options="item.name for item in appList">
+                                        </select>
+                                        <!-- /input-group -->
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">Advertisements</label>
+                                    <div class="col-md-8">
+                                        <select class="form-control select2me"
+                                                ng-model="csearch.ads" ng-options="item.name for item in adsList">
+                                        </select>
+                                        <!-- /input-group -->
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 sel-platform">Token Name</label>
+                                    <div class="col-md-8">
+                                        <select id="sel_token" class="form-control select2me"
+                                                ng-model="csearch.token"
+                                                ng-options="item.name for item in tokenList">
+                                        </select>
+                                        <!-- /input-group -->
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">Platform</label>
+                                    <div  class="col-md-8">
+                                        <select class="form-control  select2me"
+                                                ng-model="csearch.platform" ng-options="item for item in platforms">
+                                        </select>
+                                        <!-- /input-group -->
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <br/>
+                                    <button class="btn blue pull-right"  ng-click="toEvents()">{{_labels.common.btn_search}}</button>
+                                </div>
+                            </form>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+        <!--End App LIST-->
+        <!-- BEGIN ADS　ＬＩＳＴ CONTENT -->
+        <div class="todo-content col-md-7">
+
+            <div ui-view class="profile-content fade-in-up">
+            </div>
+        </div>
+        <!-- END ADS CONTENT -->
+    </div>
+    <!-- END MAIN CONTENT -->
+</div>
+<!-- BEGIN MAIN JS -->
+<script>
+
+    //Initialize Tables
+    //UserTableEditable.init();
+
+</script>
+<!-- END MAIN JS -->
+
+
+

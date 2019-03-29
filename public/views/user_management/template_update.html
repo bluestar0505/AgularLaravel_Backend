@@ -1,0 +1,88 @@
+
+
+
+<div class="modal-header">
+    <h3 class="modal-title"> {{_labels.users.modal_edit_title}}</h3>
+</div>
+<div class="modal-body ">
+
+
+    <p>
+        Account details below:
+    </p>
+    <div class="form-group">
+        <label class="control-label">Username</label>
+        <div class="input-icon">
+            <i class="fa fa-user"></i>
+            <input class="form-control placeholder-no-fix" type="text" ng-model = "useritem.username" autocomplete="off" name="username"
+                   id="r_username" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Password</label>
+        <div class="input-icon">
+            <i class="fa fa-lock"></i>
+            <input class="form-control placeholder-no-fix" type="password" ng-model = "useritem.rpassword" autocomplete="off"
+                   id="register_password"
+                   name="password"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Role</label>
+        <div class="input-icon">
+
+            <select class="form-control" ng-model="useritem.role" ng-options="x for x in roles"></select>
+        </div>
+    </div>
+    <p>
+        Personal details below:
+    </p>
+    <div class="form-group">
+        <label class="control-label">First Name</label>
+        <div class="input-icon">
+            <i class="fa fa-font"></i>
+            <input class="form-control placeholder-no-fix" ng-model = "useritem.firstname" type="text" name="firstname" id="r_firstname" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Last Name</label>
+        <div class="input-icon">
+            <i class="fa fa-font"></i>
+            <input class="form-control placeholder-no-fix" ng-model = "useritem.lastname" type="text"  name="lastname" id="r_lastname" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+        <label class="control-label">Email</label>
+        <div class="input-icon">
+            <i class="fa fa-envelope"></i>
+            <input class="form-control placeholder-no-fix" type="text" ng-model = "useritem.email" name="email" id="r_email" />
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label class="control-label">.</label>
+        <div class="input-icon">
+            <button class="btn blue pull-right" ng-click="updateItem()">Save</button>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label">.</label>
+
+    </div>
+</div>
+
+<!-- BEGIN MAIN JS -->
+<script>
+
+    //Initialize Tables
+    //UserTableEditable.init();
+
+</script>
+<!-- END MAIN JS -->
+
+
+

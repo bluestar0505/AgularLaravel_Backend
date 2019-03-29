@@ -1,0 +1,105 @@
+<!-- BEGIN PAGE HEADER-->
+<h3 class="page-title">
+    {{_labels.dashboard.title}}
+</h3>
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="fa fa-home"></i>
+            <a href="index.html">Home</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a href="#/dashboard"> {{_labels.dashboard.title}}</a>
+        </li>
+    </ul>
+
+
+</div>
+<!-- END PAGE HEADER-->
+<!-- BEGIN MAIN CONTENT -->
+<div ng-controller="DashboardController">
+
+    <!-- BEGIN DASHBOARD STATS -->
+    <div class="row">
+
+
+    </div>
+    <!-- END DASHBOARD STATS -->
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <!-- BEGIN PORTLET-->
+            <div class="portlet light ">
+                <div class="portlet-title">
+                    <div class="caption caption-md">
+                        <i class="icon-bar-chart font-green-haze hide"></i>
+                        <span class="caption-subject font-green-haze bold uppercase"> {{_labels.dashboard.chart_title1}}</span>
+                        <span class="caption-helper hide">weekly stats...</span>
+                    </div>
+                </div>
+                <div class="portlet-body">
+                    <div id="sales_statistics" class="portlet-body-morris-fit morris-chart" style="height: 260px">
+                    </div>
+                </div>
+            </div>
+            <!-- END PORTLET-->
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <!-- BEGIN PORTLET-->
+            <div class="portlet light ">
+                <div class="portlet-title">
+                    <div class="caption caption-md">
+                        <i class="icon-bar-chart font-green-haze hide"></i>
+                        <span class="caption-subject font-green-haze bold uppercase"> {{_labels.dashboard.chart_title2}}</span>
+                    </div>
+                </div>
+                <div class="portlet-body">
+                    <div class="row number-stats margin-bottom-30">
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <div class="stat-left">
+                                <div class="stat-chart">
+                                    <!-- do not line break "sparkline_bar" div. sparkline chart has an issue when the container div has line break -->
+                                    <div id="sparkline_bar"></div>
+                                </div>
+                                <div class="stat-number">
+                                    <div class="title">
+                                        {{_labels.dashboard.total_view}}
+                                    </div>
+                                    <div class="number">
+                                        {{total_view}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <div class="stat-right">
+                                <div class="stat-chart">
+                                    <!-- do not line break "sparkline_bar" div. sparkline chart has an issue when the container div has line break -->
+                                    <div id="sparkline_bar2"></div>
+                                </div>
+                                <div class="stat-number">
+                                    <div class="title">
+                                        {{_labels.dashboard.total_open}}
+                                    </div>
+                                    <div class="number">
+                                        {{total_open}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- END PORTLET-->
+        </div>
+    </div>
+</div>
+<!-- END MAIN CONTENT -->
+<!-- BEGIN MAIN JS & CSS -->
+<script>
+
+    Tasks.initDashboardWidget();
+</script>
+<!-- BEGIN MAIN JS & CSS -->

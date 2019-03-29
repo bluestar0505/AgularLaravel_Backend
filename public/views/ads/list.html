@@ -1,0 +1,39 @@
+<div class="table-toolbar">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="btn-group">
+                <button ng-click="toNewAds()" class="btn green">
+                    {{_labels.ads.btn_new}} <i class="fa fa-plus"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="todo-tasklist">
+    <div ng-repeat = "dt in clist" class="todo-tasklist-item todo-tasklist-item-border-green">
+    <div >
+        <div class="col-md-4">
+            <img class="img-rounded" ng-src="{{dt.url}}" width="100%">
+        </div>
+        <div class="col-md-6">
+            <div class="todo-tasklist-item-title">
+                {{dt.name}}
+            </div>
+            <div class="todo-tasklist-item-text">
+                <span class="label label-success label-sm"> OpenLink:</span> <a href="{{dt.openLink}}">{{dt.openLink}}</a>
+            </div>
+            <div class="todo-tasklist-item-text">
+                Placement: {{dt.placement}},&nbsp;&nbsp;&nbsp;&nbsp;Type:{{dt.type}}
+            </div>
+            <div class="todo-tasklist-item-text">
+                [Width: {{dt.width}}px, &nbsp;&nbsp;Height: {{dt.height}}px]
+            </div>
+            <div class="todo-tasklist-item-text">
+                <button type="button" class="todo-username-btn btn btn-circle btn-default btn-xs" ng-click="toUpdateAds(dt)">&nbsp; &nbsp;{{_labels.common.btn_modify}} &nbsp;&nbsp;</button>
+                <button type="button" class="todo-username-btn btn btn-circle btn-default btn-xs" ng-click="deleteAds(dt)">&nbsp; &nbsp;{{_labels.common.btn_delete}} &nbsp;&nbsp;</button>
+
+            </div>
+        </div>
+        </div>
+    </div>
+</div>

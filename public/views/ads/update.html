@@ -1,0 +1,83 @@
+    <div class="modal-header">
+        <h3 class="modal-title">{{_labels.ads.modal_edit_title}}</h3>
+    </div>
+    <div class="modal-body "  id="update_container" >
+       
+            <div class="row">
+                <div class="modal-body col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">Name:</label>
+                        <div class="input-icon">
+                            <input class="form-control placeholder-no-fix" type="text" ng-model = "cads.name" autocomplete="off" name="name"
+                                   id="r_name" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Placement</label>
+                        <div class="input-icon">
+                            <select class="form-control" ng-model="cads.placement" ng-options="x for x in placements" name="placement"></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Type</label>
+                        <div class="input-icon">
+                            <select class="form-control" ng-model="cads.type" ng-options="x for x in types" name="type"></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Open Link</label>
+                        <div class="input-icon">
+                            <input class="form-control placeholder-no-fix" name="openLink" type="text" ng-model = "cads.openLink" autocomplete="off"  placeholder="http://..." />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body col-md-4">
+                 <form method="post" enctype="multipart/form-data">
+                    <div class="form-group last">
+                        <label class="control-label col-md-3">File:</label>
+                        <div class="col-md-12">
+                            <div class="fileinput fileinput-new" data-provides="fileinput">
+                                <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
+                                    <img src="{{cads.url}}" alt=""/>
+                                </div>
+                                <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;">
+                                </div>
+                                <div>
+                                        <span class="btn default btn-file">
+                                        <span class="fileinput-new">
+                                        Select image </span>
+                                        <span class="fileinput-exists">
+                                        Change </span>
+                                        <input id="file_selector" type="file" name="attach">
+                                        </span>
+                                    <a href="#" class="btn red fileinput-exists" data-dismiss="fileinput">
+                                        Remove </a>
+                                </div>
+                            </div>
+
+                             <div class="form-actions">
+                                <label class="control-label">.</label>
+                                <div class="input-icon">
+                                    <button class="btn blue pull-right" ng-click="saveAds()">{{_labels.common.btn_save}}</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                </div>
+            </div>
+           
+       
+</div>
+
+        <!-- BEGIN MAIN JS -->
+<script>
+
+        //Initialize Tables
+       //UserTableEditable.init();
+
+</script>
+<!-- END MAIN JS -->
+
+
+

@@ -1,0 +1,88 @@
+{
+    "project": {
+        "title": "Diesellaptops",
+        "company":"Diesellaptops",
+        "footer":"Copyright © 2018 TR Systems, LLC. All rights reserved. www.diesellaptops.com",
+        "menu_dashboard":"Dashboard",
+        "menu_usermanage":"User Management",
+        "menu_app":"Applications",
+        "menu_ads":"Advertisements",
+        "menu_tokens":"App Specific Tokens",
+        "menu_analytics":"Analytics",
+        "menu_analytics_events":" Events",
+        "menu_analytics_reports":" Reports",
+        "menu_myaccount":"My Account"
+    },
+    "dashboard": {
+        "title": "Dashboard",
+        "chart_title1": "Views / Opens by Month",
+        "chart_title2": "Total",
+        "total_view": "Total Views",
+        "total_open": "Total Opens"
+    },
+    "users": {
+        "title": "User Management",
+        "btn_new": "New User",
+        "modal_new_title": "New User",
+        "modal_edit_title": "Edit User"
+    },
+    "apps": {
+        "title": "Applications",
+        "list":"Applications",
+        "btn_new": "New App",
+        "modal_new_title": "New App",
+        "modal_edit_title": "Modify App",
+        "toads": "Advertisements",
+        "totoken": "Application Tokens",
+        "question1":"Do you want to add an advertisement to this app now?",
+        "comment1":"Sorry, Select the app you want to edit.",
+        "comment2":"Sorry, Select the app you want to delete."
+    },
+    "ads": {
+        "title": "Advertisements for ",
+        "title1": "Advertisements",
+        "alone_title": "Advertisements Management",
+        "btn_new": "New Ads",
+        "list": "Ads List",
+        "modal_new_title": "New Ads",
+        "modal_edit_title": "Modify Ads"
+    },
+    "analytics": {
+        "title": "Analytics",
+        "list": "Events",
+        "m_report": "Monthly Reports",
+        "filter_title": "Filter Events",
+        "btn_new": "New Ads",
+        "modal_new_title": "New Ads",
+        "modal_edit_title": "Modify Ads"
+    },
+    "tokens": {
+        "title": "App Tokens for",
+        "title1": "Tokens",
+        "btn_new": "New Token",
+        "token_list": "Token List",
+        "comment1": "Enter the token name below.",
+        "comment2":"Sorry, Select the app you want to edit.",
+        "comment3":"Sorry, Select the ads you want to delete.",
+        "modal_new_title": "New Token",
+        "modal_edit_title": "Modify Token"
+    },
+    "common": {
+        "btn_save": "Save",
+        "btn_delete": "Delete",
+        "btn_modify": "Modify",
+        "btn_cancel": "Cancel",
+        "btn_search": "Search"
+    },
+    "alerts": {
+        "_noresult": "No Result.",
+        "_unknown": "A Problem has occured during your operation.",
+        "_saved": "Successfully saved!",
+        "_modified": "Successfully updated!",
+        "_deleted": "Successfully deleted!",
+        "ads_sel_app": "Select an application first.",
+        "comment1": "Enter the filter to narrow down the result set!",
+        "comment2": "Loading data completed!",
+        "question1": "Are you sure you want to delete this item?"
+    }
+}

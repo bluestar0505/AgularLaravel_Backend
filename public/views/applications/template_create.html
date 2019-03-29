@@ -1,0 +1,67 @@
+<h3 class="page-title">
+    {{_labels.apps.modal_new_title}}
+</h3>
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="fa fa-home"></i>
+            <a href="#/dashboard.html">Home</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a href="#/applications"> {{_labels.apps.title}}</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a href="#/applications/create"> {{_labels.apps.modal_new_title}}</a>
+        </li>
+    </ul>
+</div>
+    <div class="modal-header">
+
+    </div>
+    <div class="modal-body form ">
+        <div class="form-horizontal">
+            <div class="form-group ">
+                <div class="row">{{}}</div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-2">Name:</label>
+                <div class=" col-md-9">
+
+                    <input class="form-control" type="text" ng-model = "citem.name" autocomplete="off" name="name"
+                           id="r_name" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-2">Platform</label>
+                <div class="col-md-9">
+                    <select class="form-control" ng-model="citem.platform" ng-options="x for x in platforms"></select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-2">Description</label>
+                <div class="col-md-9">
+                    <textarea id="maxlength_textarea" class="form-control" maxlength="3000" rows="6" ng-model="citem.description" placeholder="This textarea has a limit of 3000 chars."></textarea>
+
+                </div>
+            </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary " ng-click="saveApp()">Save</button>
+            <button class="btn btn-warning" ng-click="cancelApp()">Cancel</button>
+        </div>
+        </div>
+</div>
+
+
+        <!-- BEGIN MAIN JS -->
+<script>
+
+        //Initialize Tables
+       //UserTableEditable.init();
+
+</script>
+<!-- END MAIN JS -->
+
+
+

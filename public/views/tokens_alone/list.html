@@ -1,0 +1,41 @@
+<div class="table-toolbar">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="btn-group">
+                <button ng-click="createModalOpen()" class="btn green">
+                    New Token <i class="fa fa-plus"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="todo-tasklist">
+    <table class="table table-striped table-hover table-bordered">
+        <thead>
+        <tr>
+            <th class="col-md-4">
+                Token
+            </th>
+            <th class="col-md-2">
+                Token Name
+            </th>
+            <th class="col-md-1">
+                Issuer
+            </th>
+            <th class="col-md-3 text-center">
+                Actions
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat = "dt in clist">
+            <td>{{dt.token}}</td> <td>{{dt.name}}</td><td>{{dt.issuer_name}}</td>
+            <td class="text-center">
+                <button type="button" class="todo-username-btn btn btn-circle btn-default btn-xs" ng-click="updateModalOpen(dt)">&nbsp; &nbsp;Modify &nbsp;&nbsp;</button>
+                <button type="button" class="todo-username-btn btn btn-circle btn-default btn-xs" ng-click="deleteToken(dt)">&nbsp; &nbsp;Delete &nbsp;&nbsp;</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>

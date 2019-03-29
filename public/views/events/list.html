@@ -1,0 +1,42 @@
+<div class="portlet-body ">
+
+    <!--BEGIN　App List-->
+    <div class="page-sidebar-wrapper col-md-12">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#/events/list">{{_labels.analytics.list}}</a></li>
+            <li ><a href="#/events/monthly_reports">{{_labels.analytics.m_report}}</a></li>
+        </ul>
+        <div class="portlet-body form" >
+
+            <div class="portlet light">
+                <span>{{clist.length}} items below</span>
+            <table  class="table table-striped table-hover"  id="table_list">
+                <thead>
+                <tr>
+                    <th class="col-md-2">
+                        Timestamp
+                    </th>
+                    <th class="col-md-2">
+                        Advertisement
+                    </th>
+                    <th class="col-md-2">
+                        Token
+                    </th>
+                    <th class="col-md-2">
+                        Event
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="dt in clist">
+                    <td>{{dt.timestamp}}</td>
+                    <td>{{dt.ads_name}}<br/><span class="help-block">	{{dt.app_name}}</span></td>
+                    <td>{{dt.appToken}}</td>
+                    <td>{{dt.event}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+    </div>

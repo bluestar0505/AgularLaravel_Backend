@@ -1,0 +1,76 @@
+<h3 class="page-title">
+    {{_labels.apps.modal_edit_title}} -<span class="w3-text-blue">{{citem.name}}</span>
+</h3>
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="fa fa-home"></i>
+            <a href="#/dashboard.html">Home</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a href="#/applications"> {{_labels.apps.title}}</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a href="#/applications/update">  {{_labels.apps.modal_edit_title}}-<span class="w3-text-blue">[{{citem.name}}]</span></a>
+        </li>
+    </ul>
+</div>
+
+        <div class="modal-body form form-horizontal">
+            <div class="modal-header">
+                <div class="row ">
+                    <div class="col-md-11">
+                        <div class="pull-right ">
+                            <button type="button" class="todo-username-btn btn btn-circle btn-default btn-xs" ng-click="toAdsList()">&nbsp;{{_labels.apps.toads}}&nbsp;</button>
+                            <button type="button" class="todo-username-btn btn btn-circle btn-default btn-xs" ng-click="toAppTokenList()">&nbsp;{{_labels.apps.totoken}}&nbsp;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group ">
+                <div class="row">{{}}</div>
+            </div>
+            <div class="form-group ">
+                <label class="control-label col-md-2">Name:</label>
+                <div class=" col-md-9">
+
+                    <input class="form-control" type="text" ng-model = "citem.name" autocomplete="off" name="name"
+                           id="r_name" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-2">Platform</label>
+                <div class="col-md-9">
+                    <select class="form-control" ng-model="citem.platform" ng-options="x for x in platforms"></select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-2">Description</label>
+                <div class="col-md-9">
+                    <textarea id="maxlength_textarea" class="form-control" maxlength="3000" rows="6" ng-model="citem.description" placeholder="This textarea has a limit of 3000 chars."></textarea>
+
+                </div>
+            </div>
+
+            <div class="modal-footer col-md-11">
+                <button class="btn btn-warning " ng-click="updateApp()">Save</button>
+                <button class="btn btn-primary " ng-click="deleteApp()">Delete</button>
+            </div>
+        </div>
+
+
+
+
+<!-- BEGIN MAIN JS -->
+<script>
+
+    //Initialize Tables
+    //UserTableEditable.init();
+
+</script>
+<!-- END MAIN JS -->
+
+
+

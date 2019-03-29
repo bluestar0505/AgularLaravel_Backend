@@ -1,0 +1,73 @@
+<!-- BEGIN PAGE HEADER-->
+<h3 class="page-title">
+    {{_labels.tokens.title}} {{capp.name}}
+</h3>
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="fa fa-home"></i>
+            <a href="#/dashboard.html">Home</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a href="#/token_alone">{{_labels.tokens.title1}}</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+    </ul>
+
+</div>
+<!-- END PAGE HEADER-->
+<!-- BEGIN MAIN CONTENT -->
+<div class="row">
+    <div class="col-md-12"><p></p>
+
+        <div class="portlet-body">
+            <!--BEGIN　App List-->
+            <div class="page-sidebar-wrapper">
+                <div class="todo-sidebar">
+                    <div class="portlet light">
+                        <div class="portlet-title">
+                            <div class="caption" data-toggle="collapse" data-target=".todo-project-list-content">
+                                <span class="caption-subject font-green-sharp bold uppercase">{{_labels.apps.list}}</span>
+                            </div>
+                        </div>
+
+                        <div class="portlet-body todo-project-list-content">
+                            <div class="todo-project-list">
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li ng-repeat="dt in appList">
+                                        <a href="#" ng-click="toTokenList(dt)">
+                                            <span class="badge badge-success"> {{dt.tokenCount}} </span>
+                                            {{dt.name}}({{dt.platform}}) </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End App LIST-->
+            <!-- BEGIN ADS　ＬＩＳＴ CONTENT -->
+            <div class="todo-content col-md-8">
+            <div ui-view class="profile-content fade-in-up">
+                <br><br><br><br><br>
+                <span style="text-align: center; vertical-align: middle; color:#a9a9a9"> <h3>Select an application you want...</h3></span>
+            </div>
+            </div>
+            <!-- END ADS CONTENT -->
+        </div>
+        <!-- END MAIN CONTENT -->
+    </div>
+</div>
+</div>
+<!-- BEGIN MAIN JS -->
+<script>
+
+    //Initialize Tables
+    //UserTableEditable.init();
+
+</script>
+<!-- END MAIN JS -->
+
+
+

@@ -1,0 +1,95 @@
+
+<!-- BEGIN PAGE HEADER-->
+<h3 class="page-title">
+    {{_labels.users.title}}
+</h3>
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="fa fa-home"></i>
+            <a href="#/dashboard.html">Home</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a href="#/user_management"> {{_labels.users.title}}</a>
+        </li>
+    </ul>
+
+</div>
+<!-- END PAGE HEADER-->
+<!-- BEGIN MAIN CONTENT -->
+<div class="row">
+    <div class="col-md-12">
+        <p></p>
+        <!-- BEGIN EXAMPLE TABLE PORTLET-->
+
+            <div class="portlet-body">
+                <div class="table-toolbar">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="btn-group">
+                                <button ng-click="createModalOpen()" class="btn green">
+                                    {{_labels.users.btn_new}} <i class="fa fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <table class="table table-striped table-hover " id="table_list">
+                    <thead>
+                    <tr>
+
+                        <th>
+                            Username
+                        </th>
+                        <th>
+                            Email Address
+                        </th>
+                        <th>
+                            First Name
+                        </th>
+                        <th>
+                            Last Name
+                        </th>
+                        <th>Role</th>
+                        <th>
+                            Edit
+                        </th>
+                        <th>
+                            Delete
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat = "dt in clist">
+                        <td>{{dt.username}}</td> <td>{{dt.email}}</td><td>{{dt.firstname}}</td><td >{{dt.lastname}}</td>
+                        <td>{{dt.role}}</td>
+                        <td>
+                            <a class="edit" href="javascript:;" ng-click="update_modal_open(dt)">Edit
+                            </a>
+                        </td>
+                        <td>
+                            <a class="delete" ng-click="delete_item(dt.id)">Delete
+                            </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- END MAIN CONTENT -->
+
+<!-- BEGIN MAIN JS -->
+<script>
+
+        //Initialize Tables
+       //UserTableEditable.init();
+
+</script>
+<!-- END MAIN JS -->
+
+
+

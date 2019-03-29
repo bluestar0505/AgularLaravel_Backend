@@ -1,0 +1,52 @@
+
+<!-- BEGIN PAGE HEADER-->
+<h3 class="page-title">
+    {{_labels.ads.title}} {{capp.name}}
+</h3>
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="fa fa-home"></i>
+            <a href="#/dashboard.html">Home</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a href="#/applications"> {{_labels.apps.title}}</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a href="#/applications/update"> App-[{{capp.name}}]</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a href="#/ads/list"> {{_labels.ads.title1}}</a>
+        </li>
+    </ul>
+
+</div>
+<!-- END PAGE HEADER-->
+<!-- BEGIN MAIN CONTENT -->
+<div class="row">
+    <div class="col-md-12"><p></p>
+        <div class="portlet-body">
+            
+            <!-- BEGIN ADS CONTENT -->
+            <div ui-view class="profile-content fade-in-up">
+
+            </div>
+            <!-- END ADS CONTENT -->
+        </div>
+        <!-- END MAIN CONTENT -->
+    </div>
+</div>
+<!-- BEGIN MAIN JS -->
+<script>
+
+        //Initialize Tables
+       //UserTableEditable.init();
+
+</script>
+<!-- END MAIN JS -->
+
+
+

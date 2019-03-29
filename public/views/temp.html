@@ -1,0 +1,42 @@
+<!-- BEGIN PAGE HEADER-->
+<h3 class="page-title">
+	Test Page
+</h3>
+
+<!-- END PAGE HEADER-->
+<!-- BEGIN MAIN CONTENT -->
+<span>
+            This page is to send developer's requests and retrieve responses from the server only for development environment.
+        </span>
+    <div class="form-group">
+        <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+
+        <label class="col-md-4 control-label">Protocal:</label>
+        <div class="col-md-7">
+            <select class="form-control" ng-model="postData.c_protocal" ng-options="x for x in protocalList"></select>
+        </div>
+
+        <label class="col-md-4 control-label">Url:</label>
+        <div class="col-md-7 control-label">
+            <input class="form-control placeholder-no-fix" type="text" placeholder="Url" name="url" ng-model="postData.c_url"/>
+        </div>
+
+        <label class="col-md-4 control-label">Params:</label>
+        <div class="col-md-7 control-label">
+
+            <input class="form-control placeholder-no-fix" type="text" placeholder="Params" name="params" ng-model="postData.c_params"/>
+        </div>
+
+
+    </div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="submitContent()">Test</button>
+
+</div>
+
+<!-- END MAIN CONTENT -->
+<!-- BEGIN MAIN JS & CSS -->
+<script>
+
+</script>
+<!-- BEGIN MAIN JS & CSS -->
